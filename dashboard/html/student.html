@@ -8,16 +8,14 @@
       rel="stylesheet"
       href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
     />
-    <link rel="stylesheet" href="dashboard.css" />
-    <style>
-      /* -------------- MAIN CONTENT MAIN RECENT ------------ */
-      .recent-grid {
-        margin-top: 3.5rem;
-        display: grid;
-        grid-template-columns: 100%;
-      }
-    </style>
-    <title>PLM Dashboard - Student</title>
+    <link rel="stylesheet" href="../css/dashboard_universal.css" />
+    <link rel="stylesheet" href="../css/student.css" />
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script src="../js/cet_covid_graph.js"></script>
+    <title>PLM Dashboard - President</title>
   </head>
   <body>
     <input type="checkbox" id="nav-toggle" />
@@ -47,8 +45,8 @@
           </li>
           <li>
             <a href="">
-              <span class="las la-clipboard"></span>
-              <span>Class Record</span>
+              <span class="las la-list-alt"></span>
+              <span>Assignments</span>
             </a>
           </li>
           <li>
@@ -59,14 +57,14 @@
           </li>
           <li>
             <a href="">
-              <span class="lab la-wpforms"></span>
-              <span>Enrollment</span>
+              <span class="las la-sort-numeric-up"></span>
+              <span>Grades</span>
             </a>
           </li>
           <li>
             <a href="">
-              <span class="las la-sort-numeric-up"></span>
-              <span>Grades</span>
+              <span class="lab la-wpforms"></span>
+              <span>Enrollment</span>
             </a>
           </li>
           <li>
@@ -76,7 +74,7 @@
             </a>
           </li>
           <li>
-            <a href="../index.html">
+            <a href="../../index.html">
               <span class="las la-sign-out-alt"></span>
               <span>Logout</span>
             </a>
@@ -109,7 +107,7 @@
           />
           <div>
             <h4>Raphael Enciso</h4>
-            <small>President</small>
+            <small>Student</small>
           </div>
         </div>
       </header>
@@ -128,6 +126,16 @@
 
           <div class="card-single">
             <div>
+              <h1>6</h1>
+              <span>Assignments</span>
+            </div>
+            <div>
+              <span class="las la-list-alt"></span>
+            </div>
+          </div>
+
+          <div class="card-single">
+            <div>
               <h1>3</h1>
               <span>Events</span>
             </div>
@@ -138,31 +146,11 @@
 
           <div class="card-single">
             <div>
-              <h1></h1>
-              <span>Enrollment</span>
-            </div>
-            <div>
-              <span class="lab la-wpforms"></span>
-            </div>
-          </div>
-
-          <div class="card-single">
-            <div>
-              <h1></h1>
-              <span>Grades</span>
+              <h1>1.76</h1>
+              <span>GWA (Prev Sem)</span>
             </div>
             <div>
               <span class="las la-sort-numeric-up"></span>
-            </div>
-          </div>
-
-          <div class="card-single">
-            <div>
-              <h1></h1>
-              <span>Class Record</span>
-            </div>
-            <div>
-              <span class="las la-clipboard"></span>
             </div>
           </div>
         </div>
@@ -171,7 +159,7 @@
           <div class="projects">
             <div class="card">
               <div class="card-header">
-                <h3>Classes Today</h3>
+                <h3>Classes Today: 4</h3>
                 <button>
                   See all <span class="las la-arrow-right"></span>
                 </button>
@@ -184,6 +172,7 @@
                         <td>Subject</td>
                         <td>Professor</td>
                         <td>Time</td>
+                        <td>Room</td>
                       </tr>
                     </thead>
                     <tbody>
@@ -191,21 +180,25 @@
                         <td>Software Engineering (Lab)</td>
                         <td>Jonathan M.</td>
                         <td>8:00AM-10:00AM</td>
+                        <td>GV 308</td>
                       </tr>
                       <tr>
                         <td>Automata Theory</td>
                         <td>Fernandez P.</td>
                         <td>10:00AM-1:00PM</td>
+                        <td>VIRTUAL</td>
                       </tr>
                       <tr>
                         <td>Intelligent Systems (Lec)</td>
                         <td>Ariel S.</td>
                         <td>2:00PM-5:00PM</td>
+                        <td>VIRTUAL</td>
                       </tr>
                       <tr>
                         <td>Operating System (Lab)</td>
                         <td>Dennis G.</td>
                         <td>5:00PM-7:00PM</td>
+                        <td>Comp Lab 4</td>
                       </tr>
                     </tbody>
                   </table>
@@ -213,11 +206,13 @@
               </div>
             </div>
           </div>
+        </div>
 
+        <div class="recent-grid-2">
           <div class="projects">
             <div class="card">
               <div class="card-header">
-                <h3>Attendance Today</h3>
+                <h3>Assignments Due Today: 2</h3>
                 <button>
                   See all <span class="las la-arrow-right"></span>
                 </button>
@@ -228,41 +223,27 @@
                     <thead>
                       <tr>
                         <td>Subject</td>
-                        <td>Present</td>
-                        <td>Absent</td>
-                        <td>Late</td>
+                        <td>Task</td>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td>Software Engineering (Lab)</td>
-                        <td>46</td>
-                        <td>2</td>
-                        <td>2</td>
+                        <td>Intelligent Systems (Lec)</td>
+                        <td>Activity #2</td>
                       </tr>
                       <tr>
                         <td>Automata Theory</td>
-                        <td>45</td>
-                        <td>1</td>
-                        <td>3</td>
-                      </tr>
-                      <tr>
-                        <td>Intelligent Systems (Lec)</td>
-                        <td>49</td>
-                        <td>1</td>
-                        <td>0</td>
-                      </tr>
-                      <tr>
-                        <td>Operating System (Lab)</td>
-                        <td>45</td>
-                        <td>4</td>
-                        <td>1</td>
+                        <td>Assignment #2</td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
               </div>
             </div>
+          </div>
+
+          <div class="projects">
+            <div id="chart_div" class="card card-pd"></div>
           </div>
         </div>
       </main>

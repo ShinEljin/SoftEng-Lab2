@@ -1,0 +1,16 @@
+.recent-grid {
+  grid-template-columns: 100%;
+}
+
+.recent-grid-2 {
+  margin-top: 3.5rem;
+  display: grid;
+  grid-template-columns: 40% auto;
+  grid-gap: 2rem;
+}
+
+@media only screen and (max-width: 1000px) {
+  .recent-grid-2 {
+    grid-template-columns: 100%;
+  }
+}
